@@ -2,6 +2,7 @@
 	"name": "nicolasmarcondes",
 	"version": "1.0.0",
 	"private": true,
+	"homepage": "https://nicolasmarcondes.com",
 	"scripts": {
 		"dev": "nuxt",
 		"generate": "nuxt generate",
