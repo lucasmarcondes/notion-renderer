@@ -12,7 +12,7 @@
 		data: () => ({ blockMap: null }),
 		async created() {
 			// get Notion blocks from the API via a Notion pageId
-			this.blockMap = await getPageBlocks('abe8da9f693f431c88207ee143fa89be', 'https://notion-api.splitbee.io/v1')
+			// this.blockMap = await getPageBlocks('abe8da9f693f431c88207ee143fa89be', 'https://notion-api.splitbee.io/v1')
 		},
 	}
 </script>

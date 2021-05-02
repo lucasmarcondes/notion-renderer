@@ -40,7 +40,7 @@
 		},
 		async created() {
 			// get Notion blocks from the API via a Notion pageId
-			this.blockMap = await getPageBlocks('98e9e058eebc47a4bc38070c05ff2d8f', 'https://notion-api.splitbee.io/v1')
+			// this.blockMap = await getPageBlocks('98e9e058eebc47a4bc38070c05ff2d8f', 'https://notion-api.splitbee.io/v1')
 		},
 	}
 </script>

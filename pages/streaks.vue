@@ -14,8 +14,8 @@
 			}
 		},
 		async created() {
-			this.tableData = await getPageTable('6f15fae64cd04355ad0a71608b0548a1', 'https://notion-api.splitbee.io/v1')
-			this.tableData.forEach(item => delete item.id)
+			// this.tableData = await getPageTable('6f15fae64cd04355ad0a71608b0548a1', 'https://notion-api.splitbee.io/v1')
+			// this.tableData.forEach(item => delete item.id)
 		},
 	}
 </script>
