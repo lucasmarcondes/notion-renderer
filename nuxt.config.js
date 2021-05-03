@@ -19,4 +19,9 @@ export default {
 	components: true,
 	buildModules: ['vue-notion/nuxt'],
 	modules: ['bootstrap-vue/nuxt'],
+	build: {
+		babel: {
+			compact: true,
+		},
+	},
 }
