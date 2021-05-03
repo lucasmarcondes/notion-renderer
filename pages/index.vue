@@ -9,18 +9,13 @@
 <script>
 	import { zonedTimeToUtc, utcToZonedTime, format } from 'date-fns-tz'
 	import { set } from 'date-fns'
-	import { NotionRenderer, getPageBlocks } from 'vue-notion'
 
 	export default {
-		components: {
-			NotionRenderer,
-		},
 		data() {
 			return {
 				time1: set(new Date(), { hours: 8, minutes: 0 }),
 				time2: set(new Date(), { hours: 11, minutes: 0 }),
 				nicolasTz: 'America/Los_Angeles',
-				blockMap: null,
 			}
 		},
 		computed: {
@@ -38,9 +33,9 @@
 				return format(zonedDate, 'p')
 			},
 		},
-		async created() {
-			// get Notion blocks from the API via a Notion pageId
-			// this.blockMap = await getPageBlocks('98e9e058eebc47a4bc38070c05ff2d8f', 'https://notion-api.splitbee.io/v1')
+		async asyncData({ $notion }) {
+			const blockMap = await $notion.getPageBlocks('98e9e058eebc47a4bc38070c05ff2d8f')
+			return { blockMap }
 		},
 	}
 </script>

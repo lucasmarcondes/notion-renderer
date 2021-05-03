@@ -17,5 +17,6 @@ export default {
 		link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
 	},
 	components: true,
+	buildModules: ['vue-notion/nuxt'],
 	modules: ['bootstrap-vue/nuxt'],
 }

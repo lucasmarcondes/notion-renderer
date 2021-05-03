@@ -2,6 +2,7 @@
 	"env": {
 		"test": {
 			"plugins": [
+				["@babel/plugin-proposal-private-methods", { "loose": true }],
 				[
 					"module-resolver",
 					{
@@ -11,8 +12,7 @@
 							"~": "."
 						}
 					}
-				],
-				["@babel/plugin-proposal-private-methods", { "loose": true }]
+				]
 			]
 		}
 	}
