@@ -1,9 +1,6 @@
 export default {
 	ssr: false,
 	target: 'static',
-	router: {
-		base: '/nicolasmarcondes/',
-	},
 	head: {
 		title: 'Nicolas Marcondes',
 		htmlAttrs: {
