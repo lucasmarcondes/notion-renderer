@@ -1,4 +1,6 @@
-export default {
+import { defineNuxtConfig } from 'nuxt'
+
+export default defineNuxtConfig({
 	ssr: false,
 	target: 'static',
 	head: {
@@ -13,9 +15,7 @@ export default {
 		],
 		link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
 	},
-	components: true,
-	buildModules: ['vue-notion/nuxt'],
-	modules: ['bootstrap-vue/nuxt'],
+	modules: ['vue-notion/nuxt', 'bootstrap-vue/nuxt'],
 	bootstrapVue: {
 		icons: true,
 	},
@@ -24,4 +24,4 @@ export default {
 			compact: true,
 		},
 	},
-}
+})
