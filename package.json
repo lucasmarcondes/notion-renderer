@@ -1,29 +1,12 @@
 {
-	"name": "nicolasmarcondes",
-	"version": "1.0.0",
 	"private": true,
 	"scripts": {
+		"build": "nuxt build",
 		"dev": "nuxt dev",
 		"generate": "nuxt generate",
-		"start": "nuxt start",
-		"deploy": "push-dir --dir=dist --branch=gh-pages --cleanup"
-	},
-	"dependencies": {
-		"bootstrap": "^4.6.0",
-		"bootstrap-vue": "^2.21.2",
-		"core-js": "^3.11.1",
-		"date-fns": "^2.21.1",
-		"date-fns-tz": "^1.1.4",
-		"prismjs": "^1.23.0"
+		"preview": "nuxt preview"
 	},
 	"devDependencies": {
-		"babel-plugin-module-resolver": "^4.1.0",
-		"nuxt": "3.0.0-rc.8",
-		"cross-env": "^7.0.3",
-		"eslint-config-prettier": "^8.1.0",
-		"eslint-plugin-prettier": "^3.3.1",
-		"prettier": "^2.2.1",
-		"push-dir": "^0.4.1",
-		"vue-notion": "^0.4.0"
+		"nuxt": "3.0.0-rc.8"
 	}
 }

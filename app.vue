@@ -1,8 +1,10 @@
 <template>
 	<div>
+		<Header />
 		<notion-renderer :blockMap="blockMap" fullPage />
 	</div>
 </template>
+
 <script>
 	export default {
 		async asyncData({ $notion }) {
