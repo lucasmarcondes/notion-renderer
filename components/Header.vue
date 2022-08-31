@@ -1,16 +1,23 @@
 <template>
 	<nav class="menu-bar">
-		<div>Title</div>
-		<span class="link-container"><div class="menu-item" v-for="link in links">{{ link.title }}</div></span>
+		<div>{{ title }}</div>
+		<span class="link-container">
+			<div 
+				v-for="page in pages" 
+				class="menu-item" 
+				:class="{ bold: page == currentPage }"
+				@click="setCurrentPage(page)"
+			>
+				{{ page.title }}
+			</div>
+		</span>
 	</nav>
 </template>
 
-<script setup>
-	const links = [
-		{ title: "Item 1" },
-		{ title: "Item 2" },
-		{ title: "Item 3" },
-	]
+<script setup lang="ts">
+	import { title, pages } from "../config"
+	import { useStore } from "../store"
+	const { currentPage, setCurrentPage } = useStore()
 </script>
 
 <style>
@@ -26,5 +33,8 @@
 	}
 	.menu-item {
 		padding-left: 3em;
+	}
+	.bold {
+		font-weight: bold;
 	}
 </style>

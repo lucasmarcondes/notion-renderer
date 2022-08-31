@@ -1,15 +1,12 @@
 <template>
-	<div>
-		<Header />
-		<notion-renderer :blockMap="blockMap" fullPage />
-	</div>
+	<Header />
+	<NotionRenderer :blockMap="data" fullPage prism />
 </template>
 
-<script>
-	export default {
-		async asyncData({ $notion }) {
-			const blockMap = await $notion.getPageBlocks('67c04921ccce4267a72013a1b28cb946')
-			return { blockMap }
-		},
-	}
+<script setup lang="ts">
+	import { pages } from "./config"
+
+	const pageId = pages.find(p => p.homepage)?.id
+	const { $notion } = useNuxtApp()
+	const { data } = await useAsyncData("notion", () => $notion.getPageBlocks(pageId))
 </script>
