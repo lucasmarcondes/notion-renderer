@@ -1,5 +1,4 @@
 export const title = "My Website"
-
 export const pages = [
     {
         homepage: true,
