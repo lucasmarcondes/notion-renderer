@@ -1,13 +1,17 @@
 {
-	"private": true,
+	"name": "notion-renderer",
+	"version": "1.0.0",
 	"scripts": {
-		"build": "nuxt build",
-		"dev": "nuxt dev",
-		"generate": "nuxt generate",
-		"preview": "nuxt preview"
+		"serve": "vue-cli-service serve",
+		"build": "vue-cli-service build",
+		"lint": "vue-cli-service lint"
+	},
+	"dependencies": {
+		"vue": "^3.2.2"
 	},
 	"devDependencies": {
-		"nuxt": "3.0.0-rc.8",
-		"vue3-notion": "^0.1.35"
+		"vue3-notion": "^0.1.35",
+		"@vue/cli-service": "^4.4.0"
 	}
 }
+  
